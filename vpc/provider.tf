@@ -1,0 +1,19 @@
+terraform {
+  backend "s3" {
+    bucket    = "devops-group4-prod"
+    key       = "vpc/terraform.tfstate"
+    region    = "ap-southeast-1"
+    encrypt   = true
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = var.aws_region
+}

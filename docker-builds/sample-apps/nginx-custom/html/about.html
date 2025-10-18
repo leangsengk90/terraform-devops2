@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Swarm Nginx - About</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem 0;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 3rem;
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .content h2 {
+            margin: 2rem 0 1rem 0;
+            color: #4ade80;
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .tech-item h3 {
+            margin-bottom: 0.5rem;
+            color: #4ade80;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Docker Swarm</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/health">Health</a></li>
+                <li><a href="/api/status">Status</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1>About This Application</h1>
+
+                <p>
+                    This is a custom Nginx application running in a Docker Swarm cluster on AWS.
+                    It demonstrates a production-ready containerized web server with optimized
+                    configuration, security headers, and health monitoring capabilities.
+                </p>
+
+                <h2>Infrastructure Architecture</h2>
+                <p>
+                    The application is deployed using Infrastructure as Code (IaC) with Terraform,
+                    creating a robust, scalable, and secure environment in AWS. The infrastructure
+                    includes VPC with public and private subnets, Application Load Balancer,
+                    Auto Scaling Groups, and comprehensive monitoring.
+                </p>
+
+                <h2>Technology Stack</h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h3>Nginx</h3>
+                        <p>High-performance web server</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Docker</h3>
+                        <p>Container runtime</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Docker Swarm</h3>
+                        <p>Container orchestration</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>AWS</h3>
+                        <p>Cloud infrastructure</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Terraform</h3>
+                        <p>Infrastructure as Code</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>ECR</h3>
+                        <p>Container registry</p>
+                    </div>
+                </div>
+
+                <h2>Features</h2>
+                <p>
+                    <strong>Security:</strong> Security headers, HTTPS support, and network isolation.<br>
+                    <strong>Performance:</strong> Optimized Nginx configuration with gzip compression.<br>
+                    <strong>Scalability:</strong> Auto-scaling based on CPU utilization.<br>
+                    <strong>Monitoring:</strong> Health checks, metrics, and CloudWatch integration.<br>
+                    <strong>High Availability:</strong> Multi-AZ deployment with load balancing.
+                </p>
+
+                <h2>DevOps Team Group 4</h2>
+                <p>
+                    This infrastructure was designed and implemented by DevOps Team Group 4 as part
+                    of a comprehensive cloud infrastructure project. The team focused on implementing
+                    industry best practices for security, scalability, and operational excellence.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DevOps Team Group 4. Docker Swarm Infrastructure.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
